@@ -1,26 +1,22 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Voici la nouvelle façon (V4) de déclarer ta charte graphique ! */
+@theme {
+  --color-klk-dark: #0F172A;
+  --color-klk-blue: #2563EB;
+  --color-klk-light: #F8FAFC;
+  --color-klk-slate: #475569;
+  
+  --font-heading: var(--font-poppins);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* On force le fond de page clair en CSS classique pour écraser le mode sombre de Next.js */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-klk-light);
+  color: var(--color-klk-slate);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-klk-dark);
 }
