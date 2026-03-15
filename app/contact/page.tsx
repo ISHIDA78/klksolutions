@@ -73,17 +73,17 @@ export default function Contact() {
             {/* Colonne de Droite : Le Formulaire */}
             <div className="lg:w-2/3">
               <div className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100">
-                <form className="space-y-6">
+                <form action="https://formspree.io/f/xnjgbwkn" method="POST" className="space-y-6">
                   
                   {/* Ligne 1 : Nom et Société */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-klk-dark mb-2">Nom / Prénom *</label>
-                      <input type="text" id="name" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-klk-blue focus:border-klk-blue outline-none transition bg-slate-50 text-slate-900" placeholder="Jean Dupont" required />
+                      <input type="text" id="name" name="Nom" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-klk-blue focus:border-klk-blue outline-none transition bg-slate-50 text-slate-900" placeholder="Jean Dupont" required />
                     </div>
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-klk-dark mb-2">Nom du Commerce / Société</label>
-                      <input type="text" id="company" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-klk-blue focus:border-klk-blue outline-none transition bg-slate-50 text-slate-900" placeholder="Pharmacie de la Place" />
+                      <input type="text" id="company" name="Société" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-klk-blue focus:border-klk-blue outline-none transition bg-slate-50 text-slate-900" placeholder="Pharmacie de la Place" />
                     </div>
                   </div>
 
@@ -91,18 +91,18 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-klk-dark mb-2">Email *</label>
-                      <input type="email" id="email" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-klk-blue focus:border-klk-blue outline-none transition bg-slate-50 text-slate-900" placeholder="jean@exemple.com" required />
+                      <input type="email" id="email" name="Email" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-klk-blue focus:border-klk-blue outline-none transition bg-slate-50 text-slate-900" placeholder="jean@exemple.com" required />
                     </div>
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-klk-dark mb-2">Téléphone *</label>
-                      <input type="tel" id="phone" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-klk-blue focus:border-klk-blue outline-none transition bg-slate-50 text-slate-900" placeholder="06 12 34 56 78" required />
+                      <input type="tel" id="phone" name="Téléphone" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-klk-blue focus:border-klk-blue outline-none transition bg-slate-50 text-slate-900" placeholder="06 12 34 56 78" required />
                     </div>
                   </div>
 
                   {/* Ligne 3 : Sélection du besoin */}
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-klk-dark mb-2">Votre besoin principal *</label>
-                    <select id="service" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-klk-blue focus:border-klk-blue outline-none transition bg-slate-50 text-slate-900" required>
+                    <select id="service" name="Besoin" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-klk-blue focus:border-klk-blue outline-none transition bg-slate-50 text-slate-900" required>
                       <option value="">Sélectionnez une option...</option>
                       <option value="anti-vandalisme">Bouclier Anti-Vandalisme (Acide / Rayure)</option>
                       <option value="decoration">Décoration / Vitrophanie / Design</option>
@@ -115,7 +115,7 @@ export default function Contact() {
                   {/* Ligne 4 : Le Message */}
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-klk-dark mb-2">Détails de votre projet *</label>
-                    <textarea id="message" rows={5} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-klk-blue focus:border-klk-blue outline-none transition bg-slate-50 text-slate-900 resize-none" placeholder="Décrivez la taille de votre vitrine, l'urgence de la situation, etc." required></textarea>
+                    <textarea id="message" name="Message" rows={5} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-klk-blue focus:border-klk-blue outline-none transition bg-slate-50 text-slate-900 resize-none" placeholder="Décrivez la taille de votre vitrine, l'urgence de la situation, etc." required></textarea>
                   </div>
 
                   {/* Bouton de soumission */}
